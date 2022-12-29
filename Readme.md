@@ -135,8 +135,9 @@ Despues en un archivo que llame profileMap aparte crearemos la conversion entre 
 		}
 	}
 
-Con esto podremos obtener Nombre de los pokemones y sus imagenes. Con todo esto ahora podemoos centrarnos en la Paginacion
-En el metodo Index iniciaremos tres variables que nos permitiran saber el index de la paginacion y la cantidad de elementos que tendra cada pagina.
+Con esto podremos obtener Nombre de los pokemones y sus imagenes. El resulado hasta este momento deberia ser algo como esto.
+[![caputa](a "caputa")]((https://github.com/leandroVece/paginacion/blob/master/contents/img/cap1.jpg "caputa")
+ Con todo esto ahora podemoos centrarnos en la Paginacion. En el metodo Index iniciaremos tres variables que nos permitiran saber el indice de la paginacion y la cantidad de elementos que tendra cada pagina.
 
     	pageSize = (pageSize ?? 4);
     	page = (page ?? 1);
@@ -193,3 +194,6 @@ Ahora solo queda los toque finales para presentar la vista.
     
     @Html.PagedListPager(Model, Page => Url.Action("Index", new {Page, pageSize = ViewBag.pageSize}),
     Bootstrap4PagedListRenderOptions.ClassicPlusFirstAndLast)
+
+el resultado que nos deja es el siguiente.
+[![Paginado](contest/img/cap2.jpg "Paginado")](https://github.com/leandroVece/paginacion/blob/master/contents/img/cap1.jpg "Paginado")
