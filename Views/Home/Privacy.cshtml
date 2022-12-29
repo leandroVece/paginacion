@@ -1,0 +1,21 @@
+﻿@model List<PaginacionViewModel.PokemonViewModel>;
+
+@{
+    ViewData["Title"] = "Privacy Policy";
+}
+<h1>@ViewData["Title"]</h1>
+
+<p>Use this page to detail your site's privacy policy.</p>
+
+<div class="d-flex align-content-center flex-wrap ">
+    @foreach (var item in Model)
+    {
+        <div class="card  m-1 " style="width: 120px;">
+            <img src="@item.Sprites.front_default" class="card-img-top" alt="...">
+            <div class="card-body">
+                <p class="card-text">@item.name</p>
+            </div>
+
+        </div>
+    }
+</div>

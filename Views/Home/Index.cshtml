@@ -1,0 +1,40 @@
+﻿@model X.PagedList.IPagedList<PaginacionViewModel.PokemonViewModel>;
+@using X.PagedList
+@using X.PagedList.Mvc.Bootstrap4.Core
+@using X.PagedList.Mvc.Core
+@using X.PagedList.Web.Common
+
+
+@{
+    ViewData["Title"] = "Home Page";
+
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+
+
+<div class="d-flex align-content-center flex-wrap ">
+    @foreach (var item in Model)
+    {
+        <div class="card  m-1 " style="width: 120px;">
+            <img src="@item.Sprites.front_default" class="card-img-top" alt="...">
+            <div class="card-body">
+                <p class="card-text">@item.name</p>
+            </div>
+
+        </div>
+    }
+</div>
+
+<br>
+page @( Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+<br>
+Total Iten Count @Model.TotalItemCount
+
+
+@Html.PagedListPager(Model, Page => Url.Action("Index", new {Page, pageSize = ViewBag.pageSize}),
+Bootstrap4PagedListRenderOptions.ClassicPlusFirstAndLast)
