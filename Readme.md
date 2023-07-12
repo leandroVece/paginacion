@@ -12,7 +12,7 @@ Emtity Framework nos brinda herramientas muy ultilez que nos facilita el trabajo
 	dotnet add package X.PagedList.Mvc --version 8.0.7
 	dotnet add package X.PagedList.Mvc.Core --version 8.4.3
 
-Para verciones superiores a la 4.8 es recomendable usar esta vercion. para verciones inferiores Nuget ofrece otra vercion que dejare a continuacion.
+Para versiones superiores a la 4.8 es recomendable usar esta version. para versiones inferiores Nuget ofrece otra version que dejare a continuacion.
 
     dotnet add package PagedList --version 1.17.0
     dotnet add package PagedList.Mvc --version 4.5.0
